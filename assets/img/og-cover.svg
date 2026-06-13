@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">전기차 유지비 계산기</title>
+  <desc id="desc">내연기관차와 전기차의 5년 유지비를 비교하는 EV Cost Lab 대표 이미지</desc>
+  <rect width="1200" height="630" fill="#f7faf8"/>
+  <rect x="80" y="76" width="1040" height="478" rx="24" fill="#ffffff" stroke="#dce8e3" stroke-width="2"/>
+  <rect x="132" y="132" width="92" height="92" rx="18" fill="#0f766e"/>
+  <text x="178" y="192" text-anchor="middle" fill="#ffffff" font-size="56" font-family="Arial, sans-serif" font-weight="800">E</text>
+  <text x="132" y="294" fill="#17211f" font-size="58" font-family="Arial, sans-serif" font-weight="800">전기차 유지비 계산기</text>
+  <text x="132" y="360" fill="#62706c" font-size="30" font-family="Arial, sans-serif">내연기관차 vs 전기차 5년 총비용 비교</text>
+  <rect x="132" y="424" width="352" height="46" rx="23" fill="#0f766e"/>
+  <text x="308" y="456" text-anchor="middle" fill="#ffffff" font-size="24" font-family="Arial, sans-serif" font-weight="700">월 유지비와 손익분기점 확인</text>
+  <rect x="708" y="152" width="300" height="54" rx="12" fill="#eef7f4"/>
+  <rect x="708" y="242" width="230" height="54" rx="12" fill="#fde68a"/>
+  <rect x="708" y="332" width="360" height="54" rx="12" fill="#ccfbf1"/>
+  <text x="708" y="468" fill="#134e4a" font-size="88" font-family="Arial, sans-serif" font-weight="800">5년</text>
+</svg>
