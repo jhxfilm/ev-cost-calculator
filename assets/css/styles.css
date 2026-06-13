@@ -584,12 +584,27 @@ input:focus {
   min-height: 220px;
 }
 
+.faq-hero {
+  padding-top: clamp(24px, 3vw, 40px);
+  padding-bottom: clamp(24px, 3vw, 38px);
+}
+
+.faq-hero-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
 .faq-hero h1 {
-  font-size: clamp(2.35rem, 4vw, 4rem);
+  font-size: clamp(2rem, 2.65vw, 2.75rem);
+  line-height: 1.12;
+}
+
+.faq-hero .hero-text {
+  max-width: 560px;
 }
 
 .faq-section {
-  padding-top: clamp(44px, 6vw, 72px);
+  padding-top: clamp(24px, 3vw, 38px);
 }
 
 .faq-shell {
