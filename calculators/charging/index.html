@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>전기차 충전요금 계산기 | 전기차 유지비 이득?</title>
+    <meta name="description" content="전비와 kWh당 충전요금을 기준으로 완속, 입력 요금, 급속 충전 시 월 충전비를 비교합니다." />
+    <meta name="keywords" content="전기차 유지비, 전기차 계산기, 전기차 충전요금 계산기, 전기차 할부 계산기, 내연기관차 전기차 비교, evcost" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="전기차 유지비 이득?" />
+    <meta name="naver-site-verification" content="7fd844311cb845d098c473767da560b14080d884" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:title" content="전기차 충전요금 계산기" />
+    <meta property="og:description" content="전비와 kWh당 충전요금을 기준으로 완속, 입력 요금, 급속 충전 시 월 충전비를 비교합니다." />
+    <meta property="og:image" content="https://evcost.kr/assets/img/og-cover.svg" />
+    <meta property="og:url" content="https://evcost.kr/calculators/charging/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="canonical" href="https://evcost.kr/calculators/charging/" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260613-multipage" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2838691881113814"
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "전기차 유지비 이득?",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "url": "https://evcost.kr/",
+        "description": "전기차 유지비, 충전요금, 할부, 차량 교체 비용을 비교하는 무료 계산기입니다.",
+        "inLanguage": "ko-KR",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="전기차 유지비 이득? 홈">
+        <span class="brand-mark" aria-hidden="true">kW</span>
+        <span>전기차 유지비 이득?</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="/">홈</a>
+        <a href="/calculators/ev-vs-ice/">유지비 계산기</a>
+        <a href="/calculators/loan/">할부 계산기</a>
+        <a aria-current="page" href="/calculators/charging/">충전요금 계산기</a>
+        <a href="/calculators/commute/">차량 교체 계산기</a>
+        <a href="/calculators/compact/">경차 비교</a>
+        <a href="/calculators/disposal/">처분가 계산기</a>
+        <a href="/guide/">계산 기준</a>
+        <a href="/about/">소개</a>
+        <a href="/privacy/">개인정보처리방침</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="page-hero section-band compact-hero">
+        <div class="breadcrumbs"><a href="/">홈</a><span>/</span><span>전기차 충전요금 계산기</span></div>
+        <p class="eyebrow">충전비 확인</p>
+        <h1>전기차 충전요금 계산기</h1>
+        <p class="hero-text">전비와 kWh당 충전요금을 기준으로 완속, 입력 요금, 급속 충전 시 월 충전비를 비교합니다.</p>
+      </section>
+
+      <section id="charging-calculator" class="calculator-section">
+        <div class="section-heading">
+          <p class="eyebrow">Charging Calculator</p>
+          <h2>전기차 충전요금 계산기</h2>
+          <p>
+            월 주행거리와 전비를 입력하면 필요한 전력량을 계산하고, kWh당 요금별 월 충전비를
+            비교합니다. 완속, 공용, 급속 충전 등 충전 환경에 따른 비용 차이를 확인할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="calculator-layout">
+          <form class="calc-panel" id="chargingForm">
+            <fieldset>
+              <legend>주행 및 전비</legend>
+              <label>
+                <span>월 주행거리</span>
+                <div class="input-wrap">
+                  <input id="chargeMonthlyKm" name="chargeMonthlyKm" type="number" min="100" max="10000" step="50" value="1500" />
+                  <b>km</b>
+                </div>
+              </label>
+              <label>
+                <span>전비</span>
+                <div class="input-wrap">
+                  <input id="chargeEfficiency" name="chargeEfficiency" type="number" min="1" max="12" step="0.1" value="5.7" />
+                  <b>km/kWh</b>
+                </div>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>kWh당 요금</legend>
+              <label>
+                <span>내 충전요금</span>
+                <div class="input-wrap">
+                  <input id="customChargePrice" name="customChargePrice" type="number" min="0" max="1000" step="10" value="350" />
+                  <b>원/kWh</b>
+                </div>
+              </label>
+              <label>
+                <span>완속 충전 요금</span>
+                <div class="input-wrap">
+                  <input id="slowChargePrice" name="slowChargePrice" type="number" min="0" max="1000" step="10" value="180" />
+                  <b>원/kWh</b>
+                </div>
+              </label>
+              <label>
+                <span>급속 충전 요금</span>
+                <div class="input-wrap">
+                  <input id="fastChargePrice" name="fastChargePrice" type="number" min="0" max="1000" step="10" value="350" />
+                  <b>원/kWh</b>
+                </div>
+              </label>
+            </fieldset>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <div class="result-hero">
+              <span id="chargingBadge">충전비 계산</span>
+              <h3 id="chargingHeadline">월 충전비를 계산합니다.</h3>
+              <p id="chargingSummary">월 주행거리 기준 예상 전력 사용량과 충전요금을 보여줍니다.</p>
+            </div>
+
+            <div class="metric-grid">
+              <article>
+                <span>월 필요 전력량</span>
+                <strong id="monthlyKwh">0kWh</strong>
+              </article>
+              <article>
+                <span>입력 요금 월 충전비</span>
+                <strong id="customChargeCost">0원</strong>
+              </article>
+              <article>
+                <span>100km당 충전비</span>
+                <strong id="costPer100Km">0원</strong>
+              </article>
+              <article>
+                <span>연간 충전비</span>
+                <strong id="annualChargeCost">0원</strong>
+              </article>
+            </div>
+
+            <div class="scenario-grid">
+              <article>
+                <span>완속 기준</span>
+                <strong id="slowChargeCost">0원</strong>
+              </article>
+              <article>
+                <span>입력 요금 기준</span>
+                <strong id="middleChargeCost">0원</strong>
+              </article>
+              <article>
+                <span>급속 기준</span>
+                <strong id="fastChargeCost">0원</strong>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-section muted next-tools">
+        <div class="section-heading">
+          <p class="eyebrow">More Tools</p>
+          <h2>다른 계산기도 이어서 확인해보세요</h2>
+        </div>
+        <div class="tool-grid compact-tools">
+          <a class="tool-card" href="/calculators/ev-vs-ice/">
+            <span class="tool-eyebrow">대표 계산기</span>
+            <h3>전기차 vs 내연기관 유지비 계산기</h3>
+            <p>월 주행거리, 유류비, 전기요금, 차량가를 입력해 전기차 유지비가 실제로 이득인지 바로 비교합니다.</p>
+            <div class="tag-row"><span>월 주행거리</span><span>유류비</span><span>전기요금</span><span>5년 비교</span></div>
+          </a>
+          <a class="tool-card" href="/calculators/loan/">
+            <span class="tool-eyebrow">구매 전 필수</span>
+            <h3>전기차 할부·보조금 계산기</h3>
+            <p>국고 보조금, 지자체 보조금, 취득세 감면, 선수금과 금리를 반영해 실구매가와 월 납입금을 계산합니다.</p>
+            <div class="tag-row"><span>보조금</span><span>취득세 감면</span><span>선수금</span><span>월 납입금</span></div>
+          </a>
+          <a class="tool-card" href="/calculators/commute/">
+            <span class="tool-eyebrow">장거리 출퇴근</span>
+            <h3>장거리 출퇴근 차량 교체 계산기</h3>
+            <p>기존차 수리비와 유류비, 전기차 할부금, 자동차세, 하이패스 감면까지 월 기준으로 비교합니다.</p>
+            <div class="tag-row"><span>수리비</span><span>자동차세</span><span>하이패스</span><span>5년 차이</span></div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> 전기차 유지비 이득? | 전기차 유지비 계산 정보 서비스.</p>
+      <div class="footer-links">
+        <a href="mailto:junhxx24@gmail.com">문의</a>
+        <a href="/privacy/">개인정보처리방침</a>
+        <a href="#top">맨 위로</a>
+      </div>
+    </footer>
+
+    <script src="/assets/js/app.js?v=20260613-multipage" defer></script>
+  </body>
+</html>

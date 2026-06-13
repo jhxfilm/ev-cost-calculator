@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>경차 vs 전기차 유지비 비교 계산기 | 전기차 유지비 이득?</title>
+    <meta name="description" content="경차의 유류비·통행료 혜택과 전기차의 충전비·통행료 조건을 같은 월 주행거리로 비교합니다." />
+    <meta name="keywords" content="전기차 유지비, 전기차 계산기, 전기차 충전요금 계산기, 전기차 할부 계산기, 내연기관차 전기차 비교, evcost" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="전기차 유지비 이득?" />
+    <meta name="naver-site-verification" content="7fd844311cb845d098c473767da560b14080d884" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:title" content="경차 vs 전기차 유지비 비교 계산기" />
+    <meta property="og:description" content="경차의 유류비·통행료 혜택과 전기차의 충전비·통행료 조건을 같은 월 주행거리로 비교합니다." />
+    <meta property="og:image" content="https://evcost.kr/assets/img/og-cover.svg" />
+    <meta property="og:url" content="https://evcost.kr/calculators/compact/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="canonical" href="https://evcost.kr/calculators/compact/" />
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260613-multipage" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2838691881113814"
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "전기차 유지비 이득?",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "url": "https://evcost.kr/",
+        "description": "전기차 유지비, 충전요금, 할부, 차량 교체 비용을 비교하는 무료 계산기입니다.",
+        "inLanguage": "ko-KR",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="전기차 유지비 이득? 홈">
+        <span class="brand-mark" aria-hidden="true">kW</span>
+        <span>전기차 유지비 이득?</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="/">홈</a>
+        <a href="/calculators/ev-vs-ice/">유지비 계산기</a>
+        <a href="/calculators/loan/">할부 계산기</a>
+        <a href="/calculators/charging/">충전요금 계산기</a>
+        <a href="/calculators/commute/">차량 교체 계산기</a>
+        <a aria-current="page" href="/calculators/compact/">경차 비교</a>
+        <a href="/calculators/disposal/">처분가 계산기</a>
+        <a href="/guide/">계산 기준</a>
+        <a href="/about/">소개</a>
+        <a href="/privacy/">개인정보처리방침</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="page-hero section-band compact-hero">
+        <div class="breadcrumbs"><a href="/">홈</a><span>/</span><span>경차 vs 전기차 유지비 비교 계산기</span></div>
+        <p class="eyebrow">경차 고민</p>
+        <h1>경차 vs 전기차 유지비 비교 계산기</h1>
+        <p class="hero-text">경차의 유류비·통행료 혜택과 전기차의 충전비·통행료 조건을 같은 월 주행거리로 비교합니다.</p>
+      </section>
+
+      <section id="compact-calculator" class="calculator-section">
+        <div class="section-heading">
+          <p class="eyebrow">Compact vs EV Calculator</p>
+          <h2>경차 vs 전기차 유지비 비교 계산기</h2>
+          <p>
+            경차의 낮은 유류비와 통행료 혜택, 전기차의 충전비 절감 효과를 월 기준으로 비교합니다.
+            통행료와 유류비를 바꿔보며 본인의 주행 패턴에 더 맞는 선택지를 확인해보세요.
+          </p>
+        </div>
+
+        <div class="calculator-layout">
+          <form class="calc-panel" id="compactForm">
+            <fieldset>
+              <legend>공통 조건</legend>
+              <label>
+                <span>월 주행거리</span>
+                <div class="input-wrap">
+                  <input id="compactMonthlyKm" name="compactMonthlyKm" type="number" min="100" max="10000" step="50" value="1500" />
+                  <b>km</b>
+                </div>
+              </label>
+              <label>
+                <span>할인 전 월 통행료</span>
+                <div class="input-wrap">
+                  <input id="compactBaseToll" name="compactBaseToll" type="number" min="0" step="10000" value="100000" />
+                  <b>원</b>
+                </div>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>경차 조건</legend>
+              <label>
+                <span>경차 연비</span>
+                <div class="input-wrap">
+                  <input id="compactFuelEfficiency" name="compactFuelEfficiency" type="number" min="1" max="40" step="0.1" value="15" />
+                  <b>km/L</b>
+                </div>
+              </label>
+              <label>
+                <span>유류비</span>
+                <div class="input-wrap">
+                  <input id="compactFuelPrice" name="compactFuelPrice" type="number" min="500" max="4000" step="10" value="2000" />
+                  <b>원/L</b>
+                </div>
+              </label>
+              <label>
+                <span>경차 통행료 감면율</span>
+                <div class="input-wrap">
+                  <input id="compactTollDiscount" name="compactTollDiscount" type="number" min="0" max="100" step="1" value="50" />
+                  <b>%</b>
+                </div>
+              </label>
+            </fieldset>
+
+            <fieldset>
+              <legend>전기차 조건</legend>
+              <label>
+                <span>전기차 전비</span>
+                <div class="input-wrap">
+                  <input id="compactEvEfficiency" name="compactEvEfficiency" type="number" min="1" max="12" step="0.1" value="5.7" />
+                  <b>km/kWh</b>
+                </div>
+              </label>
+              <label>
+                <span>전기차 충전요금</span>
+                <div class="input-wrap">
+                  <input id="compactElectricityPrice" name="compactElectricityPrice" type="number" min="0" max="1000" step="10" value="350" />
+                  <b>원/kWh</b>
+                </div>
+              </label>
+              <label>
+                <span>전기차 통행료 감면율</span>
+                <div class="input-wrap">
+                  <input id="compactEvTollDiscount" name="compactEvTollDiscount" type="number" min="0" max="100" step="1" value="30" />
+                  <b>%</b>
+                </div>
+              </label>
+            </fieldset>
+          </form>
+
+          <aside class="result-panel" aria-live="polite">
+            <div class="result-hero">
+              <span id="compactBadge">경차 비교</span>
+              <h3 id="compactHeadline">경차와 전기차의 월 유지비를 비교합니다.</h3>
+              <p id="compactSummary">유류비, 충전비, 통행료를 월 기준으로 계산합니다.</p>
+            </div>
+
+            <div class="metric-grid">
+              <article>
+                <span>경차 월 유지비</span>
+                <strong id="compactMonthlyTotal">0원</strong>
+              </article>
+              <article>
+                <span>전기차 월 유지비</span>
+                <strong id="compactEvMonthlyTotal">0원</strong>
+              </article>
+              <article>
+                <span>월 차이</span>
+                <strong id="compactMonthlyDiff">0원</strong>
+              </article>
+              <article>
+                <span>연간 차이</span>
+                <strong id="compactAnnualDiff">0원</strong>
+              </article>
+            </div>
+
+            <div class="scenario-grid">
+              <article>
+                <span>경차 월 유류비</span>
+                <strong id="compactFuelMonthly">0원</strong>
+              </article>
+              <article>
+                <span>전기차 월 충전비</span>
+                <strong id="compactEvEnergyMonthly">0원</strong>
+              </article>
+              <article>
+                <span>경차 월 통행료</span>
+                <strong id="compactTollMonthly">0원</strong>
+              </article>
+              <article>
+                <span>전기차 월 통행료</span>
+                <strong id="compactEvTollMonthly">0원</strong>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-section muted next-tools">
+        <div class="section-heading">
+          <p class="eyebrow">More Tools</p>
+          <h2>다른 계산기도 이어서 확인해보세요</h2>
+        </div>
+        <div class="tool-grid compact-tools">
+          <a class="tool-card" href="/calculators/ev-vs-ice/">
+            <span class="tool-eyebrow">대표 계산기</span>
+            <h3>전기차 vs 내연기관 유지비 계산기</h3>
+            <p>월 주행거리, 유류비, 전기요금, 차량가를 입력해 전기차 유지비가 실제로 이득인지 바로 비교합니다.</p>
+            <div class="tag-row"><span>월 주행거리</span><span>유류비</span><span>전기요금</span><span>5년 비교</span></div>
+          </a>
+          <a class="tool-card" href="/calculators/loan/">
+            <span class="tool-eyebrow">구매 전 필수</span>
+            <h3>전기차 할부·보조금 계산기</h3>
+            <p>국고 보조금, 지자체 보조금, 취득세 감면, 선수금과 금리를 반영해 실구매가와 월 납입금을 계산합니다.</p>
+            <div class="tag-row"><span>보조금</span><span>취득세 감면</span><span>선수금</span><span>월 납입금</span></div>
+          </a>
+          <a class="tool-card" href="/calculators/charging/">
+            <span class="tool-eyebrow">충전비 확인</span>
+            <h3>전기차 충전요금 계산기</h3>
+            <p>전비와 kWh당 충전요금을 기준으로 완속, 입력 요금, 급속 충전 시 월 충전비를 비교합니다.</p>
+            <div class="tag-row"><span>kWh당 요금</span><span>완속</span><span>급속</span><span>연간 충전비</span></div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> 전기차 유지비 이득? | 전기차 유지비 계산 정보 서비스.</p>
+      <div class="footer-links">
+        <a href="mailto:junhxx24@gmail.com">문의</a>
+        <a href="/privacy/">개인정보처리방침</a>
+        <a href="#top">맨 위로</a>
+      </div>
+    </footer>
+
+    <script src="/assets/js/app.js?v=20260613-multipage" defer></script>
+  </body>
+</html>

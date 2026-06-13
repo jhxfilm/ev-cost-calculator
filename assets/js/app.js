@@ -146,7 +146,7 @@ const won = new Intl.NumberFormat("ko-KR", {
 });
 
 function getNumber(id) {
-  const value = Number(elements[id].value);
+  const value = Number(elements[id]?.value);
   return Number.isFinite(value) ? value : 0;
 }
 
@@ -673,17 +673,22 @@ function renderConversionCalculator() {
   elements.conversionPayback.textContent = message.payback;
 }
 
-costFields.forEach((id) => elements[id].addEventListener("input", renderCostCalculator));
-loanFields.forEach((id) => elements[id].addEventListener("input", renderLoanCalculator));
-chargingFields.forEach((id) => elements[id].addEventListener("input", renderChargingCalculator));
-commuteFields.forEach((id) => elements[id].addEventListener("input", renderCommuteCalculator));
-compactFields.forEach((id) => elements[id].addEventListener("input", renderCompactCalculator));
-conversionFields.forEach((id) => elements[id].addEventListener("input", renderConversionCalculator));
-elements.year.textContent = new Date().getFullYear();
+function setupCalculator(fields, render) {
+  const activeFields = fields.map((id) => elements[id]).filter(Boolean);
+  if (activeFields.length !== fields.length) return;
+
+  activeFields.forEach((field) => field.addEventListener("input", render));
+  render();
+}
+
+if (elements.year) {
+  elements.year.textContent = new Date().getFullYear();
+}
+
 setupAmountHints();
-renderCostCalculator();
-renderLoanCalculator();
-renderChargingCalculator();
-renderCommuteCalculator();
-renderCompactCalculator();
-renderConversionCalculator();
+setupCalculator(costFields, renderCostCalculator);
+setupCalculator(loanFields, renderLoanCalculator);
+setupCalculator(chargingFields, renderChargingCalculator);
+setupCalculator(commuteFields, renderCommuteCalculator);
+setupCalculator(compactFields, renderCompactCalculator);
+setupCalculator(conversionFields, renderConversionCalculator);
