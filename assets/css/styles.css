@@ -484,6 +484,12 @@ input:focus {
   font-weight: 800;
 }
 
+.footer-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 @media (max-width: 900px) {
   .site-header {
     align-items: flex-start;
